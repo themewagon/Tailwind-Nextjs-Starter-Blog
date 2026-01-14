@@ -28,7 +28,6 @@ import rehypePrismPlus from "rehype-prism-plus";
 import rehypePresetMinify from "rehype-preset-minify";
 import siteMetadata from "./data/siteMetadata";
 import { allCoreContent, sortPosts } from "pliny/utils/contentlayer.js";
-import prettier from "prettier";
 
 const root = process.cwd();
 const isProduction = process.env.NODE_ENV === "production";
@@ -80,9 +79,7 @@ async function createTagCount(allBlogs) {
       });
     }
   });
-  const formatted = await prettier.format(JSON.stringify(tagCount, null, 2), {
-    parser: "json",
-  });
+  const formatted = JSON.stringify(tagCount, null, 2);
   writeFileSync("./app/tag-data.json", formatted);
 }
 
