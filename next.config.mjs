@@ -1,8 +1,6 @@
-const { withContentlayer } = require('next-contentlayer2')
+import { withContentlayer } from 'next-contentlayer2'
 
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
-})
+import withBundleAnalyzer from '@next/bundle-analyzer'
 
 // You might need to insert additional domains in script-src if you are using external services
 const ContentSecurityPolicy = `
@@ -54,15 +52,15 @@ const securityHeaders = [
   },
 ]
 
-const output = process.env.EXPORT ? 'export' : undefined
-const basePath = process.env.BASE_PATH || undefined
-const unoptimized = process.env.UNOPTIMIZED ? true : undefined
+const output = 'export'
+const basePath = process.env.BASE_PATH || '/Tailwind-Nextjs-Starter-Blog'
+const unoptimized = true
 
 /**
  * @type {import('next/dist/next-server/server/config').NextConfig}
  **/
-module.exports = () => {
-  const plugins = [withContentlayer, withBundleAnalyzer]
+export default () => {
+  const plugins = [withContentlayer, withBundleAnalyzer({ enabled: process.env.ANALYZE === 'true' })]
   return plugins.reduce((acc, next) => next(acc), {
     output,
     basePath,
