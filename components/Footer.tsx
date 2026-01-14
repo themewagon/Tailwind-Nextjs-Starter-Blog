@@ -32,6 +32,7 @@ export default function Footer() {
           </Link>{' '}
           • Distributed by
           <Link href="https://themewagon.com" target="_blank">
+            {' '}
             ThemeWagon
           </Link>
         </div>
