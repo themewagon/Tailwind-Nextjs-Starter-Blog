@@ -6,7 +6,7 @@
 
 #### Download
 
-- [Download from ThemeWagon](https://themewagon.com/themes/Tailwind-Nextjs-Starter-Blog/)
+- [Download from ThemeWagon](https://themewagon.com/themes/tailwind-blog/)
 
 ## Getting Started
 
