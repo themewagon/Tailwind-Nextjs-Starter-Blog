@@ -9,7 +9,7 @@ authors: ["sparrowhawk"]
 
 # Introduction
 
-The tailwind starter blog has out of the box support for [Next.js's built-in image component](https://nextjs.org/docs/api-reference/next/image) and automatically swaps out default image tags in markdown or mdx documents to use the Image component provided.
+The tailwind starter blog has out of the box support for Next.js's built-in image component and automatically swaps out default image tags in markdown or mdx documents to use the Image component provided.
 
 # Usage
 
@@ -59,15 +59,15 @@ _Note_: If you try to save the image, it is in webp format, if your browser supp
 
 ![ocean](/static/images/ocean.jpeg)
 
-Photo by [YUCAR FotoGrafik](https://unsplash.com/@yucar?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-on [Unsplash](https://unsplash.com/s/photos/sea?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+Photo by YUCAR FotoGrafik
+on Unsplash
 
 # Benefits
 
 - Smaller image size with Webp (~30% smaller than jpeg)
 - Responsive images - the correct image size is served based on the user's viewport
 - Lazy loading - images load as they are scrolled to the viewport
-- Avoids [Cumulative Layout Shift](https://web.dev/cls/)
+- Avoids Cumulative Layout Shift
 - Optimization on demand instead of build-time - no increase in build time!
 
 # Limitations
@@ -76,7 +76,8 @@ on [Unsplash](https://unsplash.com/s/photos/sea?utm_source=unsplash&utm_medium=r
 
   If you do not want to be tied to Vercel, you can remove `imgToJsx` in `remarkPlugins` in `lib/mdx.js`. This would avoid substituting the default `img` tag.
 
-  Alternatively, one could wait for image optimization at build time to be supported. A different library, [next-optimized-images](https://github.com/cyrilwanner/next-optimized-images) does that, although it requires transforming the images through webpack which is not done here.
+  Alternatively, one could wait for image optimization at build time to be supported. A different library, next-optimized-images does that, although it requires transforming the images through webpack which is not done here.
 
 - Images from external links are not passed through `next/image`
 - All images have to be stored in the `public` folder e.g `/static/images/ocean.jpeg`
+
