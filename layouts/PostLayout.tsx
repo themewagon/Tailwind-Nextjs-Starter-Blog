@@ -92,7 +92,7 @@ export default function PostLayout({
                         <dd>
                           {author.twitter && (
                             <Link
-                              href={author.twitter}
+                              href={'#!'}
                               className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                             >
                               {author.twitter
@@ -112,11 +112,11 @@ export default function PostLayout({
                 {children}
               </div>
               <div className="pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">
-                <Link href={discussUrl(path)} rel="nofollow">
+                <Link href={'#!'} rel="nofollow">
                   Discuss on Twitter
                 </Link>
                 {` • `}
-                <Link href={editUrl(filePath)}>View on GitHub</Link>
+                <Link href={'#!'}>View on GitHub</Link>
               </div>
               {siteMetadata.comments && (
                 <div
